@@ -58,7 +58,17 @@ const Home = () => {
         <h1 className="text-2xl font-bold text-center mb-4">
           KML File Uploader
         </h1>
-        <UploadKML onFileUpload={setGeoJsonData} />
+        <UploadKML
+          onFileUpload={(data) => {
+            setGeoJsonData(null);
+            setSummary(null);
+            setDetailedResults([]);
+
+            setTimeout(() => {
+              setGeoJsonData(data);
+            }, 0);
+          }}
+        />
 
         {geoJsonData && (
           <div className="flex flex-col sm:flex-row sm:gap-4 mt-4">
