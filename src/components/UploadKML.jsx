@@ -28,7 +28,7 @@ const UploadKML = ({ onFileUpload }) => {
       <input
         type="file"
         accept=".kml"
-        className="block w-full text-sm text-gray-700
+        className="block w-full text-sm text-gray-700 cursor-pointer
                   file:mr-4 file:py-2 file:px-4
                   file:rounded-md file:border-0
                   file:text-sm file:font-semibold
